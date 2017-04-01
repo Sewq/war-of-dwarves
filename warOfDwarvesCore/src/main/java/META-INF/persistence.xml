@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="war-of-dwarves">
 		<non-jta-data-source>java:/datasources/warofdwarves</non-jta-data-source>
-		<class>pl.sewq.model.dwarf.Stats</class>
-		<class>pl.sewq.core.model.item.Item</class>
-		<class>pl.sewq.model.dwarf.Dwarf</class>
+		<class>pl.sewq.core.jpa.model.Stats</class>
+		<class>pl.sewq.core.jpa.model.Item</class>
+		<class>pl.sewq.core.jpa.model.Dwarf</class>
 		<properties>
 		<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 		</properties>
