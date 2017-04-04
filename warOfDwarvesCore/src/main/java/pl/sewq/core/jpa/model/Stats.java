@@ -1,4 +1,4 @@
-package pl.sewq.model.dwarf;
+package pl.sewq.core.jpa.model;
 
 import java.io.Serializable;
 

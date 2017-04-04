@@ -1,4 +1,4 @@
-package pl.sewq.core.model.item;
+package pl.sewq.core.jpa.model;
 
 import java.io.Serializable;
 
@@ -8,8 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import pl.sewq.model.dwarf.Dwarf;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "WAR_ITEMS")
