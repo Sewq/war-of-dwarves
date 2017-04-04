@@ -1,4 +1,4 @@
-package pl.sewq.model.dwarf;
+package pl.sewq.core.jpa.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -11,15 +11,23 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import pl.sewq.core.model.item.Item;
+import pl.sewq.core.professions.DwarfClass;
 
 @Entity
 @Table(name = "WAR_DWARFS")
+@NamedQueries({
+        @NamedQuery(name = Dwarf.GET_DWARF_BY_NAME, query = "select d from Dwarf d where d.name = :name"),
+        @NamedQuery(name = Dwarf.GET_DWARFS, query = "select f from Dwarf f") })
 public class Dwarf implements Serializable {
+
+	public static final String GET_DWARF_BY_NAME = "getDwarfByName";
+	public static final String GET_DWARFS = "getDwarfs";
 
 	private static final long serialVersionUID = -3740547296489808552L;
 

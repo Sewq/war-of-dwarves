@@ -16,10 +16,6 @@ public class BaseJpaDao {
 		return entityManager;
 	}
 
-	public final void setEntityMenager(final EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-
 	protected final Query prepareQuery(final String query,
 	        final Map<String, Object> params) {
 		final Query q = getEntityManager().createQuery(query);
